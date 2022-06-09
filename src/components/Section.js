@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import {Fade} from "react-reveal";
 
 function Section (
     {
@@ -12,15 +13,19 @@ function Section (
 ){
     return( 
     <Wrap bgImange={backgroundImg}>
+      <Fade bottom>
         <ItemText>
             <h1>{title}</h1>
             <p>{description}</p>
         </ItemText>
+        </Fade>
         <Buttons>
+          <Fade bottom>
         <ButtonGroup>
             <LeftButton>{leftBtnText}</LeftButton>
             {rightBtnText&&<RightButton>{rightBtnText}</RightButton>}
         </ButtonGroup>
+        </Fade>
 
         <DownArrow src="/images/down-arrow.png"/>
         </Buttons>
@@ -83,8 +88,10 @@ const Wrap = styled.div`
   background-image:${(props) => `url("/images/${props.bgImange}")`};
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // vertical
-  align-items: center; // horizontal
+  justify-content: space-between; 
+  align-items: center;
+  object-fit:fill;
+  
 `;
 const DownArrow = styled.img `
 display: block;
