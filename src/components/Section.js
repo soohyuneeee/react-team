@@ -80,7 +80,6 @@ inline-size: auto;
 const Buttons = styled.div`
 `;
 const Wrap = styled.div`
-  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -90,7 +89,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between; 
   align-items: center;
-  object-fit:fill;
+  object-fit:cover;
   
 `;
 const DownArrow = styled.img `
