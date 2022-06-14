@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components"
 import Section from "./Section";
+import Footer from "./Footer";
 function Home (){
     return (
     <Container>
@@ -40,6 +41,8 @@ function Home (){
         leftBtnText="자세히 알아보기"
         
         />
+        <Footer/>
+        
         
 
     </Container>

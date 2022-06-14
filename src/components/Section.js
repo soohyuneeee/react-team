@@ -16,7 +16,7 @@ function Section (
       <Fade bottom>
         <ItemText>
             <h1>{title}</h1>
-            <p>{description}</p>
+            <a href="dd" class="application-link">{description}</a>
         </ItemText>
         </Fade>
         <Buttons>
@@ -36,8 +36,14 @@ function Section (
 }
 export default Section;
 const ItemText = styled.div`
+  h1{
+    font-size:50px;
+  }
   padding-top: 15vh;
   text-align: center;
+  a{
+    color:black;
+  }
 `;
 const ButtonGroup = styled.div`
   display: flex;
@@ -90,6 +96,10 @@ const Wrap = styled.div`
   justify-content: space-between; 
   align-items: center;
   object-fit:cover;
+  * {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
   
 `;
 const DownArrow = styled.img `
